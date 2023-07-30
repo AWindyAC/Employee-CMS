@@ -78,7 +78,7 @@ function mainMenu() {
             ]
         }
     ]).then(res => {
-        let choice = res.choice;
+        let choice = res.action;
         switch (choice) {
           case "VIEW_EMPLOYEES":
             viewEmployees();
@@ -493,4 +493,9 @@ function updateEmployeeManager() {
               })
           })
       })
+  }
+
+  function quit() {
+    console.log('Bye');
+    process.exit(0)
   }
